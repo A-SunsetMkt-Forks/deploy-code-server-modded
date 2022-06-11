@@ -1,31 +1,29 @@
-# deploy-code-server 🚀
+# deploy-code-server
 
-A collection of one-click buttons and scripts for deploying [code-server](https://github.com/cdr/code-server) to various cloud hosting platforms. The fastest way to get a code-server environment! ☁️
+一个在[Railway](https://railway.app/)上的[code-server](https://github.com/cdr/code-server)部署。
 
-|                                                                                                                 | Name              | Type          | Lowest-Price Plan             | Deploy                                                  |
-| --------------------------------------------------------------------------------------------------------------- | ----------------- | ------------- | ----------------------------- | ------------------------------------------------------- |
-| [![AWS EC2](img/logo/aws-ec2.png)](https://aws.amazon.com/ec2)                                                  | AWS EC2           | VM            | Free Tier, 1 CPU, 1 GB RAM    | [see guide](guides/aws-ec2.md)                          |
-| [![DigitalOcean](img/logo/digitalocean.png)](https://digitalocean.com)                                          | DigitalOcean      | VM            | $5/mo, 1 CPU, 1 GB RAM        | [see guide](guides/digitalocean.md)                     |
-| [![Vultr](img/logo/vultr.png)](https://vultr.com)                                                               | Vultr             | VM            | $3.50/mo, 1 CPU, 512 MB RAM   | coming soon                                             |
-| [![Linode](img/logo/linode.png)](https://linode.com)                                                            | Linode            | VM            | $5/mo, 1 CPU, 1 GB RAM        | [see guide](guides/linode.md)                           |
-| [![Railway](img/logo/railway.png)](https://railway.app)                                                         | Railway           | Container     | Free, Shared CPU, 1 GB RAM 🚀 | [see guide](guides/railway.md)                          |
-| [![Heroku](img/logo/heroku.png)](https://heroku.com)                                                            | Heroku            | Container     | Free, 1 CPU, 512 MB RAM       | [see guide](guides/heroku.md)                           |
-| [![Azure App Service](img/logo/azure-app-service.png)](https://azure.microsoft.com/en-us/services/app-service/) | Azure App Service | Container     | Free, 1 CPU, 1 GB RAM         | [see guide](https://github.com/bpmct/code-server-azure) |
-| [![Oracle Cloud](img/logo/oracle-logo.png)](https://www.oracle.com/cloud/) | Oracle Cloud | Terraform / OCI     | Free Tier Support         | [see guide](https://github.com/oracle-devrel/terraform-oci-code-server) |
-| [![Coder](img/logo/coder.png)](https://coder.com/docs)                                                          | Coder             | Dev Workspace | For developer teams 👨🏼‍💻        | [read the docs](https://coder.com/docs)                 |
+这里展示了部署此环境所需的配置文件。
 
----
+配置定位是一个美化的VSCode及适用于Python初学者的临时开发环境，但似乎越来越偏向自己的喜好了。
 
-## code-server on a VM vs. a Container
+配置文件部分参考了[这里](https://zhuanlan.zhihu.com/p/386285855)。
 
-- VMs are deployed once, and then can be modified to install new software
-  - You need to save "snapshots" to use your latest images
-  - Storage is always persistent, and you can usually add extra volumes
-  - VMs can support many workloads, such as running Docker or Kubernetes clusters
-  - [👀 Docs for the VM install script](deploy-vm/)
-- Deployed containers do not persist, and are often rebuilt
-  - Containers can shut down when you are not using them, saving you money
-  - All software and dependencies need to be defined in the `Dockerfile` or install script so they aren't destroyed on a rebuild. This is great if you want to have a new, clean environment every time you code
-  - Most app platforms do not support running docker or virtual volume mounts in the container.
-  - Storage may not be persistent. You may have to use [rclone](https://rclone.org/) to store your filesystem on a cloud service. Documented below:
-  - [📄 Docs for code-server-deploy-container](deploy-container/)
+由于未知bug请手动安装中文插件，完成后刷新页面即可。
+
+（事实上这个Web版项目code-server移除了所有微软服务，严格上只能叫code-server不能加VS，只是上游代码库相同且*恰巧*界面风格、操作习惯等和VSCode一致，也因此不能直接从微软的Marketplace下载插件而是用了另一个开源插件来源）
+
+（微软发布的源码库是Code - OSS，Visual Studio Code is a distribution of the Code - OSS repository with Microsoft-specific customizations released under a traditional Microsoft product license.）
+
+如果想使用微软的Marketplace：
+
+```shell
+export EXTENSIONS_GALLERY='{"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery"}'
+```
+
+然而，微软的EULA禁止这种行为。
+
+## 快速部署
+
+个人建议使用Railway部署，点击下方按钮使用本仓库配置。
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Flwd-temp%2Fdeploy-code-server&envs=PASSWORD%2CGIT_REPO&PASSWORDDesc=Your+password+to+log+in+to+code-server+with&GIT_REPODesc=A+git+repo+to+clone+and+open+in+code-server+%28ex.+https%3A%2F%2Fgithub.com%2Fcdr%2Fdocs.git%29)
