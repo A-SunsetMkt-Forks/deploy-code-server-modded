@@ -1,6 +1,6 @@
 # deploy-code-server
 
-一个在[Railway](https://railway.app/)上的[code-server](https://github.com/cdr/code-server)部署。
+一个在任意Docker容器部署的[code-server](https://github.com/cdr/code-server)。
 
 这里展示了部署此环境所需的配置文件。
 
@@ -9,10 +9,6 @@
 配置文件部分参考了[这里](https://zhuanlan.zhihu.com/p/386285855)。
 
 由于未知bug请手动安装中文插件，完成后刷新页面即可。
-
-（事实上这个Web版项目code-server移除了所有微软服务，严格上只能叫code-server不能加VS，只是上游代码库相同且*恰巧*界面风格、操作习惯等和VSCode一致，也因此不能直接从微软的Marketplace下载插件而是用了另一个开源插件来源）
-
-（微软发布的源码库是Code - OSS，Visual Studio Code is a distribution of the Code - OSS repository with Microsoft-specific customizations released under a traditional Microsoft product license.）
 
 如果想使用微软的Marketplace：
 
