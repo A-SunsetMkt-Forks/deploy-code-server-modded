@@ -24,6 +24,10 @@ export EXTENSIONS_GALLERY='{"serviceUrl": "https://marketplace.visualstudio.com/
 
 `GIT_REPO`: 默认打开的Git仓库，第一次启动时自动clone。
 
+## 其他
+
+需要注意，大部分Docker部署平台不支持容器root权限。
+
 ## Docker镜像
 
 https://hub.docker.com/r/lwdtemp/deploy-code-server
