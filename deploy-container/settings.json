@@ -2,10 +2,6 @@
   "workbench.colorTheme": "Material Theme",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontSize": 16,
-  "git.postCommitCommand": "sync",
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "git.autofetch": true,
   "[python]": {
     "editor.tabSize": 4,
     "editor.defaultFormatter": "ms-python.python"
@@ -13,5 +9,11 @@
   "telemetry.enableTelemetry": false,
   "files.autoGuessEncoding": true,
   "telemetry.telemetryLevel": "off",
-  "gitlens.showWelcomeOnInstall": false
+  "gitlens.showWelcomeOnInstall": false,
+  "code-runner.executorMap": {
+    "python": "python3 -u",
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  }
 }
