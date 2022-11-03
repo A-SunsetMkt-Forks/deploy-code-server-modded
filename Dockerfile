@@ -53,7 +53,8 @@ RUN /usr/bin/code-server --install-extension ms-python.python && \
     /usr/bin/code-server --install-extension yzhang.markdown-all-in-one && \
     /usr/bin/code-server --install-extension redhat.vscode-yaml && \
     /usr/bin/code-server --install-extension jock.svg && \
-    /usr/bin/code-server --install-extension MS-CEINTL.vscode-language-pack-zh-hans
+    /usr/bin/code-server --install-extension MS-CEINTL.vscode-language-pack-zh-hans && \
+    /usr/bin/code-server --install-extension formulahendry.code-runner
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
