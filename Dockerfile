@@ -54,7 +54,11 @@ RUN /usr/bin/code-server --install-extension ms-python.python && \
     /usr/bin/code-server --install-extension redhat.vscode-yaml && \
     /usr/bin/code-server --install-extension jock.svg && \
     /usr/bin/code-server --install-extension MS-CEINTL.vscode-language-pack-zh-hans && \
-    /usr/bin/code-server --install-extension formulahendry.code-runner
+    /usr/bin/code-server --install-extension formulahendry.code-runner && \
+    /usr/bin/code-server --install-extension GitHub.vscode-pull-request-github && \
+    /usr/bin/code-server --install-extension ritwickdey.LiveServer && \
+    /usr/bin/code-server --install-extension redhat.vscode-xml && \
+    /usr/bin/code-server --install-extension cweijan.vscode-office
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
