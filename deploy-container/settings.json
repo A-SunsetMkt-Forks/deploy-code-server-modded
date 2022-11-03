@@ -11,7 +11,7 @@
   "telemetry.telemetryLevel": "off",
   "gitlens.showWelcomeOnInstall": false,
   "code-runner.executorMap": {
-    "python": "python3 -u",
+    "python": "python3 -u"
   },
   "[cpp]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
