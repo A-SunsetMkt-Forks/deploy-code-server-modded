@@ -39,7 +39,21 @@ RUN /usr/bin/code-server --install-extension ms-python.python && \
     /usr/bin/code-server --install-extension luquedaniel.languague-renpy && \
     /usr/bin/code-server --install-extension equinusocio.vsc-material-theme && \
     /usr/bin/code-server --install-extension pkief.material-icon-theme && \
-    /usr/bin/code-server --install-extension equinusocio.vsc-material-theme-icons
+    /usr/bin/code-server --install-extension equinusocio.vsc-material-theme-icons && \
+    /usr/bin/code-server --install-extension jeff-hykin.better-cpp-syntax && \
+    /usr/bin/code-server --install-extension notskm.clang-tidy && \
+    /usr/bin/code-server --install-extension xaver.clang-format && \
+    /usr/bin/code-server --install-extension llvm-vs-code-extensions.vscode-clangd && \
+    /usr/bin/code-server --install-extension twxs.cmake && \
+    /usr/bin/code-server --install-extension ms-vscode.cmake-tools && \
+    /usr/bin/code-server --install-extension vadimcn.vscode-lldb && \
+    /usr/bin/code-server --install-extension ms-toolsai.jupyter && \
+    /usr/bin/code-server --install-extension ms-toolsai.jupyter-keymap && \
+    /usr/bin/code-server --install-extension ms-toolsai.jupyter-renderers && \
+    /usr/bin/code-server --install-extension yzhang.markdown-all-in-one && \
+    /usr/bin/code-server --install-extension redhat.vscode-yaml && \
+    /usr/bin/code-server --install-extension jock.svg && \
+    /usr/bin/code-server --install-extension MS-CEINTL.vscode-language-pack-zh-hans
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
@@ -76,11 +90,14 @@ RUN sudo apt-get install -y \
     java-common \
     default-jre \
     default-jdk \
-    ffmpeg
+    ffmpeg \
+    llvm \
+    gdb \
+    tcptraceroute
 
 RUN /usr/bin/python3 -m pip install -U pip setuptools
 RUN /usr/bin/python3 -m pip install requests httpx scrapy aiohttp pyquery beautifulsoup4 \
-  selenium pyppeteer pylint flask django tornado numpy pandas scipy autopep8 faker
+  selenium pyppeteer pylint flask django tornado numpy pandas scipy autopep8 faker httpie lxml
 
 # RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
 #         ~/.fzf/install
