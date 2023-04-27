@@ -39,26 +39,7 @@ RUN /usr/bin/code-server --install-extension ms-python.python && \
     /usr/bin/code-server --install-extension luquedaniel.languague-renpy && \
     /usr/bin/code-server --install-extension equinusocio.vsc-material-theme && \
     /usr/bin/code-server --install-extension pkief.material-icon-theme && \
-    /usr/bin/code-server --install-extension equinusocio.vsc-material-theme-icons && \
-    /usr/bin/code-server --install-extension jeff-hykin.better-cpp-syntax && \
-    /usr/bin/code-server --install-extension notskm.clang-tidy && \
-    /usr/bin/code-server --install-extension xaver.clang-format && \
-    /usr/bin/code-server --install-extension llvm-vs-code-extensions.vscode-clangd && \
-    /usr/bin/code-server --install-extension twxs.cmake && \
-    /usr/bin/code-server --install-extension ms-vscode.cmake-tools && \
-    /usr/bin/code-server --install-extension vadimcn.vscode-lldb && \
-    /usr/bin/code-server --install-extension ms-toolsai.jupyter && \
-    /usr/bin/code-server --install-extension ms-toolsai.jupyter-keymap && \
-    /usr/bin/code-server --install-extension ms-toolsai.jupyter-renderers && \
-    /usr/bin/code-server --install-extension yzhang.markdown-all-in-one && \
-    /usr/bin/code-server --install-extension redhat.vscode-yaml && \
-    /usr/bin/code-server --install-extension jock.svg && \
-    /usr/bin/code-server --install-extension MS-CEINTL.vscode-language-pack-zh-hans && \
-    /usr/bin/code-server --install-extension formulahendry.code-runner && \
-    /usr/bin/code-server --install-extension GitHub.vscode-pull-request-github && \
-    /usr/bin/code-server --install-extension ritwickdey.LiveServer && \
-    /usr/bin/code-server --install-extension redhat.vscode-xml && \
-    /usr/bin/code-server --install-extension cweijan.vscode-office
+    /usr/bin/code-server --install-extension equinusocio.vsc-material-theme-icons
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
