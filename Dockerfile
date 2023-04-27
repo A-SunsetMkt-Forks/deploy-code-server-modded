@@ -82,8 +82,7 @@ RUN sudo apt-get install -y \
     tcptraceroute
 
 RUN /usr/bin/python3 -m pip install -U pip setuptools
-RUN /usr/bin/python3 -m pip install requests httpx scrapy aiohttp pyquery beautifulsoup4 \
-  selenium pyppeteer pylint flask django tornado numpy pandas scipy autopep8 faker httpie lxml
+RUN /usr/bin/python3 -m pip install requests pylint autopep8
 
 # RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
 #         ~/.fzf/install
